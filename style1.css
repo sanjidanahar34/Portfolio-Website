@@ -379,7 +379,7 @@ form .btn2{
         display: none;
      }
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width:1024px){
     #header{
         background-image: url();
     }
@@ -391,19 +391,6 @@ form .btn2{
     .header-text h1{
         font-size: 30px;
     }
- .container {
-    flex-direction: column;
-    padding: 10px;
-  }
-    .portfolio-image {
-    width: 100%;
-    height: auto;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
             
    nav .fa-solid {
         display: block;
@@ -505,4 +492,21 @@ margin-right: 20px;
     display: block;
 }
 
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .portfolio-image {
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
 
