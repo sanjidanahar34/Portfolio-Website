@@ -93,7 +93,7 @@ nav ul li a:hover::after{
     height: 300px;
     border-radius: 50%;
     flex-shrink: 0;
-    border: solid 5px #ff004f;
+    border: solid 4px #ff004f;
 }
 
 .header-text h1{
@@ -580,7 +580,7 @@ order: -1;
   }
 
   .header-text {
-    margin-top: 40px;
+    margin-top: 30px;
     font-size: 16px;
      flex-direction: column; /* stack items vertically */
         align-items: center;
@@ -591,14 +591,15 @@ order: -1;
   
   .header-text h1 {
     font-size: 35px;
-    margin-top: 40px;
+    margin-top: 30px;
     flex: unset;
   }
 .profile-img{
-    margin-top: 40px;
+    margin-top: 25px;
     order: -1;
     width: 200px;
     height: 200px;
+    border:solid 2px #ff004;
 }
   #sidemenu {
     position: fixed;
@@ -633,3 +634,4 @@ order: -1;
     text-align: center;
   }
 }
+
