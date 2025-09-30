@@ -52,20 +52,51 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="background.jpeg">
+                    <img src="experiment picture3.jpeg">
                     </div>
                     <div class="about-col-2">
                         <h1 class="subtittle"> About Me</h1>
-                        <p class="about-text"> I am Md. Naeem Sadman, an international Biotechnology graduate from Guizhou 
-                    University, China. My research focuses on plant biotechnology, gene editing, 
-            and functional genomics, including work on improving rice branching for higher yields.
-             I am passionate about computational biology and applying AI to integrate and analyze 
-             multi-omics datasets for a systems-level understanding of biological processes. 
-             My goal is to bridge cutting-edge laboratory research with real-world applications
-              in agriculture and healthcare. Committed to advancing science in Bangladesh, I aim to 
-              establish agricultural research centers and contribute to technology-driven public health 
-              initiatives.Outside the lab, I mentor aspiring researchers and engage with global scientific
-               communities to promote collaboration and knowledge sharing.#BeCurious</p>
+                        <p class="about-text">I am Md Nayeem Sadman, a deeply motivated international 
+                            Bachelor's degree holder in Biotechnology from the College of Life Sciences, 
+                            Guizhou University, a prestigious "double first-class" institution in China.
+                             My journey, originating from Bangladesh and into a highly competitive academic 
+                             environment abroad, has instilled in me a unique global perspective and a deep 
+                             commitment to harnessing science and technology to improve healthcare and 
+                             agriculture worldwide. My main goal is to serve as a conduit between pioneering 
+                             laboratory innovations and their real-world applications. <span id="dot">......</span>
+                   <span id="more" style="display: none;">  My academic and research interests are focused on the dynamic convergence of agricultural biotechnology 
+and computational biology. I strongly believe in the transformative potential of green biotechnology,
+ especially in the use of cutting-edge technologies such as gene editing to address critical global 
+ challenges like food security and environmental sustainability. This conviction drives my research,
+  where I have explored mechanisms controlling plant architecture, such as in the project, “Overexpression
+   of CsBRC, an F-box gene from Camellia sinensis, enhances plant branching in tobacco and rice.” Building 
+   directly on this experience, I am now deeply engaged in a targeted gene-editing project focused on a 
+   specific F-BOX gene in rice. The successfully edited seeds are currently being cultivated in Hainan for
+    maturation, after which we will conduct detailed phenotypic analysis. Our primary objective is to develop
+     improved rice varieties with enhanced branching, a trait we hypothesize will lead to substantially
+      increased yields and contribute directly to global food security solutions.
+In parallel, I am fascinated by the data-centric nature of modern biology. I am deeply interested in
+ computational biology and the application of artificial intelligence (AI) to integrate and interpret 
+ complex, high-throughput multi-omics (e.g., genomics, proteomics) datasets. I believe that a holistic, 
+ systems-level understanding of biological processes can only be achieved through sophisticated analysis 
+ of such integrated data. This approach is critical for developing next-generation diagnostics and
+  personalized therapies for complex diseases.
+Ultimately, my educational pursuits are inextricably linked to my deep commitment to my native Bangladesh.
+ My long-term goal is to apply the knowledge and skills I have acquired to establish state-of-the-art 
+ agricultural research centers in Bangladesh. These centers will aim to empower local farmers with stable 
+ and high-yielding crop varieties, thereby strengthening the country’s food security and economy. 
+ Furthermore, I want to actively contribute to public health initiatives by developing and implementing
+  technology-driven healthcare solutions.
+Outside the laboratory and lecture hall, I am a passionate advocate for community engagement.
+ My experience as a volunteer with the World Health Organization (WHO) has given me invaluable
+  insight into global public health challenges. My early participation in the Bangladesh Chemistry
+   and Biology Olympiad ignited my passion for scientific inquiry. Today, I channel this passion by 
+   mentoring aspiring life science students and young researchers, as I believe that building a collaborative
+    and knowledge-sharing ecosystem is essential for scientific advancement. My guiding principle in all 
+    endeavors is an insatiable drive to explore the unknown.
+#BeCurious
+</span> </p>
+          <span id="seeMore" style="color: #007bff; cursor: pointer; text-decoration: underline;">See more</span>           
      <div class="tab-tittle">
     <p class="tab-links active-link" onclick="opentab('Skill')">Skill</p>
      <p class="tab-links" onclick="opentab('Experience')">Experience</p>
@@ -290,9 +321,42 @@
       .catch(error => console.error('Error!', error.message))
   })
 </script>
+ <script>
+  const seeMore = document.getElementById("seeMore");
+  const dots = document.getElementById("dot");
+  const moreText = document.getElementById("more");
+
+  let expanded = false;
+
+  // When clicking "See more"
+  seeMore.addEventListener("click", (event) => {
+    event.stopPropagation(); // Stop the click from bubbling up
+    dots.style.display = "none";
+    moreText.style.display = "inline";
+    seeMore.style.display = "none";
+    expanded = true;
+  });
+
+  // When clicking anywhere else on the document
+  document.addEventListener("click", (event) => {
+    // If expanded and clicked outside the seeMore or the extra text
+    if (
+      expanded &&
+      !moreText.contains(event.target) &&
+      event.target !== seeMore
+    ) {
+      dots.style.display = "inline";
+      moreText.style.display = "none";
+      seeMore.style.display = "inline";
+      expanded = false;
+    }
+  });
+</script>
+
 </body>
 
 </html>
+
 
 
 
